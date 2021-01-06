@@ -12,6 +12,6 @@ class Laporan extends Model
     public function kegiatan()
     {
 
-        return $this->BelongsTo('App\kegiatan');
+        return $this->BelongsTo('App\Kegiatan');
     }
 }

@@ -75,10 +75,10 @@ class KegiatanController extends Controller
      */
     public function edit($id)
     {
-        $kegiatan = Kegiatan::all();
-        $kegiatanId = Kegiatan::findOrFail($id);
+        $category = Category::all();
+        $categoryId = Category::findOrFail($id);
         $kegiatan = Kegiatan::findOrFail($id);
-        return view('kegiatan.edit', compact('kegiatan', 'kegiatan', 'kegiatanId'));
+        return view('kegiatan.edit', compact('kegiatan', 'category', 'categoryId'));
     }
 
     /**
