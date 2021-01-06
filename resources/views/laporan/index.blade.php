@@ -29,7 +29,7 @@
                     <td><img src="{{asset('storage/image/'.$row->image)}}" style="width: 100px;"></td>
                     <td>
                         <a href="{{ route('laporan.edit' , $row->id) }}" class="btn btn-info">Edit</a>
-                        <form action="{{route('laporan.destroy', $row->id) }}" method="POST" style="display: inline">
+                        <form action="{{route('laporan.destroy', $row->id) }}" method="POST" style="display: inline" onsubmit="return confirm('Apakah ingin menghapus data?')">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button class="btn btn-danger">Delete</button>

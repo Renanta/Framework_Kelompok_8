@@ -27,7 +27,7 @@
                     <td>{{ $row->description}}</td>
                     <td>
                         <a href="{{ route('category.edit' , $row->id) }}" class="btn btn-info">Edit</a>
-                        <form action="{{route('category.destroy', $row->id) }}" method="POST" style="display: inline">
+                        <form action="{{route('category.destroy', $row->id) }}" method="POST" style="display: inline" onsubmit="return confirm('Apakah ingin menghapus data?')">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button class="btn btn-danger">Delete</button>
