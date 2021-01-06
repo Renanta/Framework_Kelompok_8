@@ -31,7 +31,7 @@
                             <label for="category" class="col-sm-3 text-right control-label col-form-label">Kategori</label>
                             <div class="col-md-9">
                                 <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category_id">
-                                    <option>{{ $categoryId->name }}</option>
+                                    <option value="$categoryId->id">{{ $categoryId->name }}</option>
                                     @foreach($category as $row)
                                     <option value="{{ $row->id }}">{{ $row->name }}</option>
                                     @endforeach
